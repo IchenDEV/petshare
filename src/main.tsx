@@ -1,5 +1,7 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { createRoot } from 'react-dom/client';
+import { PetX } from '@petx/react';
+import '@petx/react/styles.css';
 import './styles.css';
 
 type Pet = {
@@ -12,43 +14,21 @@ type Pet = {
 };
 
 const animationRows = [
-  { label: 'Idle', row: 0, frames: 6 },
-  { label: 'Run', row: 1, frames: 8 },
-  { label: 'Wave', row: 4, frames: 5 },
-  { label: 'Focus', row: 7, frames: 6 },
+  { label: 'Idle', animation: 'idle' },
+  { label: 'Run', animation: 'runningRight' },
+  { label: 'Wave', animation: 'waving' },
+  { label: 'Review', animation: 'review' },
 ];
 
-function frameCountForRow(row: number) {
-  return animationRows.find((item) => item.row === row)?.frames ?? 6;
-}
-
-function SpritePreview({ pet, row = 0 }: { pet: Pet; row?: number }) {
-  const frameCount = frameCountForRow(row);
-  const [frame, setFrame] = useState(0);
-
-  useEffect(() => {
-    setFrame(0);
-
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      return undefined;
-    }
-
-    const timer = window.setInterval(() => {
-      setFrame((currentFrame) => (currentFrame + 1) % frameCount);
-    }, 140);
-
-    return () => window.clearInterval(timer);
-  }, [frameCount, row]);
-
+function SpritePreview({ pet, animation = 'idle' }: { pet: Pet; animation?: string }) {
   return (
-    <div className="sprite-shell" aria-hidden="true">
-      <div
-        className="pet-sprite"
-        style={{
-          backgroundImage: `url(${pet.spritesheetPath})`,
-          '--row': row,
-          '--frame': frame,
-        } as React.CSSProperties}
+    <div className="sprite-shell">
+      <PetX
+        src={pet.spritesheetPath}
+        animation={animation}
+        size={192}
+        className="character-sprite"
+        title={`${pet.displayName} desktop character`}
       />
     </div>
   );
@@ -79,7 +59,7 @@ function PetCard({ pet, onSelect }: { pet: Pet; onSelect: (pet: Pet) => void }) 
 }
 
 function PetDetail({ pet, onClose }: { pet: Pet; onClose: () => void }) {
-  const [row, setRow] = useState(0);
+  const [animation, setAnimation] = useState('idle');
 
   return (
     <div className="modal-backdrop" role="presentation" onClick={onClose}>
@@ -94,7 +74,7 @@ function PetDetail({ pet, onClose }: { pet: Pet; onClose: () => void }) {
           ×
         </button>
         <div className="modal-preview">
-          <SpritePreview pet={pet} row={row} />
+          <SpritePreview pet={pet} animation={animation} />
         </div>
         <div className="modal-content">
           <p className="pet-id">{pet.id}</p>
@@ -104,8 +84,8 @@ function PetDetail({ pet, onClose }: { pet: Pet; onClose: () => void }) {
             {animationRows.map((item) => (
               <button
                 key={item.label}
-                className={row === item.row ? 'active' : ''}
-                onClick={() => setRow(item.row)}
+                className={animation === item.animation ? 'active' : ''}
+                onClick={() => setAnimation(item.animation)}
               >
                 {item.label}
               </button>

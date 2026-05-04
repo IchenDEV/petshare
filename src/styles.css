@@ -167,14 +167,8 @@ a {
   overflow: hidden;
 }
 
-.pet-sprite {
-  width: 192px;
-  height: 208px;
-  image-rendering: auto;
-  background-repeat: no-repeat;
-  background-size: 1536px 1872px;
-  background-position-x: calc(var(--frame, 0) * -192px);
-  background-position-y: calc(var(--row, 0) * -208px);
+.character-sprite {
+  display: block;
 }
 
 .pet-card-body {
@@ -423,7 +417,4 @@ a {
   .modal-preview .sprite-shell {
     transform: scale(1);
   }
-}
-
-@media (prefers-reduced-motion: reduce) {
 }

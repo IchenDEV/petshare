@@ -5,10 +5,16 @@ test('shows the character gallery and opens details', async ({ page }) => {
 
   await expect(page.getByRole('heading', { name: 'Codex 桌面人物' })).toBeVisible();
   await expect(page.locator('.pet-card')).toHaveCount(9);
-  await expect(page.locator('.pet-sprite').first()).toHaveCSS('background-image', /spritesheet\.webp/);
+  await expect(page.locator('.codex-pet').first()).toHaveCSS('--codex-pet-src', /spritesheet\.webp/);
+  await expect(page.locator('.codex-pet').first()).toHaveAttribute('data-animation', 'idle');
   const positions = new Set<string>();
   for (let index = 0; index < 12; index += 1) {
-    positions.add(await page.locator('.pet-sprite').first().evaluate((el) => getComputedStyle(el).backgroundPositionX));
+    positions.add(
+      await page
+        .locator('.codex-pet')
+        .first()
+        .evaluate((el) => getComputedStyle(el).getPropertyValue('--codex-pet-x').trim()),
+    );
     await page.waitForTimeout(80);
   }
   expect(positions).not.toContain('-1152px');
@@ -21,5 +27,6 @@ test('shows the character gallery and opens details', async ({ page }) => {
   await page.getByRole('button', { name: '详情' }).click();
   await expect(page.getByRole('dialog')).toBeVisible();
   await page.getByRole('button', { name: 'Wave' }).click();
+  await expect(page.getByRole('dialog').locator('.codex-pet')).toHaveAttribute('data-animation', 'waving');
   await expect(page.getByRole('link', { name: '下载完整 zip' })).toHaveAttribute('href', '/downloads/jobs.zip');
 });

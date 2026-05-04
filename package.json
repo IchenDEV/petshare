@@ -1,0 +1,23 @@
+{
+  "name": "codex-petshare",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync:pets": "node scripts/sync-pets.mjs",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test:browser": "playwright test"
+  },
+  "dependencies": {
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@vitejs/plugin-react": "^5.1.1",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.7"
+  }
+}

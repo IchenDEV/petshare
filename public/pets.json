@@ -1,0 +1,74 @@
+[
+  {
+    "id": "bill-gates",
+    "displayName": "Bill Gates",
+    "description": "A tiny pixel-style Bill Gates-inspired coding companion with square glasses, gray hair, a blue sweater, and a calm friendly expression.",
+    "spritesheetPath": "/pets/bill-gates/spritesheet.webp",
+    "manifestPath": "/pets/bill-gates/pet.json",
+    "downloadPath": "/downloads/bill-gates.zip"
+  },
+  {
+    "id": "doraemon",
+    "displayName": "哆啦A梦",
+    "description": "A compact Codex digital pet version of Doraemon, a blue-and-white robot cat with a red nose, red collar, yellow bell, white tummy pouch, round head, and tiny limbs.",
+    "spritesheetPath": "/pets/doraemon/spritesheet.webp",
+    "manifestPath": "/pets/doraemon/pet.json",
+    "downloadPath": "/downloads/doraemon.zip"
+  },
+  {
+    "id": "einstein",
+    "displayName": "Einstein",
+    "description": "A tiny Einstein-inspired Codex pet with wild white hair and a friendly scholar face.",
+    "spritesheetPath": "/pets/einstein/spritesheet.webp",
+    "manifestPath": "/pets/einstein/pet.json",
+    "downloadPath": "/downloads/einstein.zip"
+  },
+  {
+    "id": "frieren",
+    "displayName": "Frieren",
+    "description": "A tiny Codex digital pet inspired by Frieren, a white-haired elf mage simplified into a compact pixel mascot.",
+    "spritesheetPath": "/pets/frieren/spritesheet.webp",
+    "manifestPath": "/pets/frieren/pet.json",
+    "downloadPath": "/downloads/frieren.zip"
+  },
+  {
+    "id": "jobs",
+    "displayName": "Jobs",
+    "description": "A tiny Steve Jobs inspired Codex pet in a black turtleneck with round glasses and a presentation remote.",
+    "spritesheetPath": "/pets/jobs/spritesheet.webp",
+    "manifestPath": "/pets/jobs/pet.json",
+    "downloadPath": "/downloads/jobs.zip"
+  },
+  {
+    "id": "leijun",
+    "displayName": "Leijun",
+    "description": "A compact pixel-pet inspired by Lei Jun in a navy suit, white shirt, dark dotted tie, smiling with an OK hand gesture.",
+    "spritesheetPath": "/pets/leijun/spritesheet.webp",
+    "manifestPath": "/pets/leijun/pet.json",
+    "downloadPath": "/downloads/leijun.zip"
+  },
+  {
+    "id": "marx",
+    "displayName": "马克思",
+    "description": "A tiny Karl Marx-inspired pixel pet with a large white beard, dark coat, and intense thoughtful expression.",
+    "spritesheetPath": "/pets/marx/spritesheet.webp",
+    "manifestPath": "/pets/marx/pet.json",
+    "downloadPath": "/downloads/marx.zip"
+  },
+  {
+    "id": "trumpet",
+    "displayName": "Trumpet",
+    "description": "A tiny Codex pet inspired by Donald Trump, with a blond swoop, navy suit, red tie, and compact pixel-art mascot proportions.",
+    "spritesheetPath": "/pets/trumpet/spritesheet.webp",
+    "manifestPath": "/pets/trumpet/pet.json",
+    "downloadPath": "/downloads/trumpet.zip"
+  },
+  {
+    "id": "wenfeng",
+    "displayName": "Wenfeng",
+    "description": "A compact Codex digital pet based on Liang Wenfeng in a blue suit.",
+    "spritesheetPath": "/pets/wenfeng/spritesheet.webp",
+    "manifestPath": "/pets/wenfeng/pet.json",
+    "downloadPath": "/downloads/wenfeng.zip"
+  }
+]

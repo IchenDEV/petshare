@@ -1,0 +1,25 @@
+import { expect, test } from '@playwright/test';
+
+test('shows the character gallery and opens details', async ({ page }) => {
+  await page.goto('/');
+
+  await expect(page.getByRole('heading', { name: 'Codex 桌面人物' })).toBeVisible();
+  await expect(page.locator('.pet-card')).toHaveCount(9);
+  await expect(page.locator('.pet-sprite').first()).toHaveCSS('background-image', /spritesheet\.webp/);
+  const positions = new Set<string>();
+  for (let index = 0; index < 12; index += 1) {
+    positions.add(await page.locator('.pet-sprite').first().evaluate((el) => getComputedStyle(el).backgroundPositionX));
+    await page.waitForTimeout(80);
+  }
+  expect(positions).not.toContain('-1152px');
+  expect(positions).not.toContain('-1344px');
+
+  await page.getByPlaceholder('搜索名字、id 或描述').fill('jobs');
+  await expect(page.locator('.pet-card')).toHaveCount(1);
+  await expect(page.getByRole('heading', { name: 'Jobs' })).toBeVisible();
+
+  await page.getByRole('button', { name: '详情' }).click();
+  await expect(page.getByRole('dialog')).toBeVisible();
+  await page.getByRole('button', { name: 'Wave' }).click();
+  await expect(page.getByRole('link', { name: '下载完整 zip' })).toHaveAttribute('href', '/downloads/jobs.zip');
+});

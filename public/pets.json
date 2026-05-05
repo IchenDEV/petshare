@@ -8,6 +8,14 @@
     "downloadPath": "/downloads/bill-gates.zip"
   },
   {
+    "id": "columbina",
+    "displayName": "Columbina",
+    "description": "A tiny Codex digital pet inspired by Genshin Impact's Columbina.",
+    "spritesheetPath": "/pets/columbina/spritesheet.webp",
+    "manifestPath": "/pets/columbina/pet.json",
+    "downloadPath": "/downloads/columbina.zip"
+  },
+  {
     "id": "doraemon",
     "displayName": "哆啦A梦",
     "description": "A compact Codex digital pet version of Doraemon, a blue-and-white robot cat with a red nose, red collar, yellow bell, white tummy pouch, round head, and tiny limbs.",
@@ -24,12 +32,28 @@
     "downloadPath": "/downloads/einstein.zip"
   },
   {
+    "id": "elysia",
+    "displayName": "Elysia",
+    "description": "A tiny Codex digital pet based on Honkai Impact 3rd's Elysia, with pink hair, wing-like white hairpiece, purple eyes, white-gold-purple outfit, and a crystal motif.",
+    "spritesheetPath": "/pets/elysia/spritesheet.webp",
+    "manifestPath": "/pets/elysia/pet.json",
+    "downloadPath": "/downloads/elysia.zip"
+  },
+  {
     "id": "frieren",
     "displayName": "Frieren",
     "description": "A tiny Codex digital pet inspired by Frieren, a white-haired elf mage simplified into a compact pixel mascot.",
     "spritesheetPath": "/pets/frieren/spritesheet.webp",
     "manifestPath": "/pets/frieren/pet.json",
     "downloadPath": "/downloads/frieren.zip"
+  },
+  {
+    "id": "furina",
+    "displayName": "Furina",
+    "description": "A tiny Fontaine-inspired dramatic hydro performer pet with a blue-and-white outfit.",
+    "spritesheetPath": "/pets/furina/spritesheet.webp",
+    "manifestPath": "/pets/furina/pet.json",
+    "downloadPath": "/downloads/furina.zip"
   },
   {
     "id": "jobs",
@@ -54,6 +78,14 @@
     "spritesheetPath": "/pets/marx/spritesheet.webp",
     "manifestPath": "/pets/marx/pet.json",
     "downloadPath": "/downloads/marx.zip"
+  },
+  {
+    "id": "nahida",
+    "displayName": "纳西妲",
+    "description": "纳西妲，一只小小的叶子主题 chibi 数字宠物。",
+    "spritesheetPath": "/pets/nahida/spritesheet.webp",
+    "manifestPath": "/pets/nahida/pet.json",
+    "downloadPath": "/downloads/nahida.zip"
   },
   {
     "id": "trumpet",

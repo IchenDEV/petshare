@@ -2,5 +2,6 @@
   "id": "wenfeng",
   "displayName": "Wenfeng",
   "description": "A compact Codex digital pet based on Liang Wenfeng in a blue suit.",
+  "spriteVersionNumber": 2,
   "spritesheetPath": "spritesheet.webp"
 }

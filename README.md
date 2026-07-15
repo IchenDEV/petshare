@@ -23,6 +23,8 @@ Run:
 npm run sync:pets
 ```
 
+All gallery packages use the Codex pet V2 contract: `spriteVersionNumber: 2` and an 8 x 11 atlas (`1536x2288`, with 192 x 208 cells). The gallery passes each full manifest to `@petx/react` 0.2.x so the renderer selects the V2 atlas geometry automatically.
+
 This creates:
 
 - `public/pets/<pet-id>/pet.json`

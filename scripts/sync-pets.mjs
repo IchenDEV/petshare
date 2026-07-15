@@ -27,6 +27,7 @@ async function readPetManifest(petDir, id) {
     id: manifest.id || id,
     displayName: manifest.displayName || id,
     description: manifest.description || '',
+    spriteVersionNumber: manifest.spriteVersionNumber,
     spritesheetPath: `/pets/${id}/spritesheet.webp`,
     manifestPath: `/pets/${id}/pet.json`,
     downloadPath: `/downloads/${id}.zip`,

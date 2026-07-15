@@ -2,5 +2,6 @@
   "id": "columbina",
   "displayName": "Columbina",
   "description": "A tiny Codex digital pet inspired by Genshin Impact's Columbina.",
+  "spriteVersionNumber": 2,
   "spritesheetPath": "spritesheet.webp"
 }

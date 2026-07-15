@@ -2,5 +2,6 @@
   "id": "furina",
   "displayName": "Furina",
   "description": "A tiny Fontaine-inspired dramatic hydro performer pet with a blue-and-white outfit.",
+  "spriteVersionNumber": 2,
   "spritesheetPath": "spritesheet.webp"
 }

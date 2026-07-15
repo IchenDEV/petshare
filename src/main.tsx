@@ -8,6 +8,7 @@ type Pet = {
   id: string;
   displayName: string;
   description: string;
+  spriteVersionNumber: 2;
   spritesheetPath: string;
   manifestPath: string;
   downloadPath: string;
@@ -24,6 +25,7 @@ function SpritePreview({ pet, animation = 'idle' }: { pet: Pet; animation?: stri
   return (
     <div className="sprite-shell">
       <PetX
+        pet={pet}
         src={pet.spritesheetPath}
         animation={animation}
         size={192}

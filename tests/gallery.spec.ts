@@ -7,6 +7,7 @@ test('shows the character gallery and opens details', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Codex 桌面人物' })).toBeVisible();
   await expect(page.locator('.pet-card')).toHaveCount(pets.length);
   await expect(page.locator('.codex-pet').first()).toHaveCSS('--codex-pet-src', /spritesheet\.webp/);
+  await expect(page.locator('.codex-pet').first()).toHaveCSS('--codex-pet-background-height', '2288px');
   await expect(page.locator('.codex-pet').first()).toHaveAttribute('data-animation', 'idle');
   const positions = new Set<string>();
   for (let index = 0; index < 12; index += 1) {
